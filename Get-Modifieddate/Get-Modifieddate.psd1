@@ -30,7 +30,7 @@ CompanyName = 'Manoj Krishnasamy'
 Copyright = '(c) 2019 Manoj Krishnasamy. All rights reserved.'
 
 # Description of the functionality provided by this module
-# Description = ''
+# Description = 'This module will help us to get the affected or changed file under folder having many subfolders '
 
 # Minimum version of the Windows PowerShell engine required by this module
 # PowerShellVersion = ''
