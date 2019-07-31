@@ -75,6 +75,7 @@ Task Build -Depends Tests {
 Task Deploy -Depends Build {
     $lines
 
+    #will publish to PSGallery only if the commit mesage is !deploy
     # Gate deployment
     if (
         $ENV:BHBuildSystem -ne 'Unknown' -and
