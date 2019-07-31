@@ -44,7 +44,7 @@ Task Tests -Depends Init {
             "https://ci.appveyor.com/api/testresults/nunit/$($env:APPVEYOR_JOB_ID)",
             "$ProjectRoot\$TestFile" )
     }
-
+    Remove-Item "$ProjectRoot\$TestFile" -Force -ErrorAction SilentlyContinue
     if ($TestResults.FailedCount -gt 0)
     {
         Write-Error "Failed '$($TestResults.FailedCount)' tests, build failed"

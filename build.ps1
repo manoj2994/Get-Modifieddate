@@ -6,8 +6,8 @@ Get-PackageProvider -Name NuGet -ForceBootstrap | Out-Null
 $dependentModules = @('Pester','BuildHelpers','Psake','PSDeploy')
 
 foreach ($module in $dependentModules){
-    if (!(Get-Module -Name $module -ListAvailable)){ 
-        Install-Module -Name $module -Force        
+    if (!(Get-Module -Name $module -ListAvailable)){
+        Install-Module -Name $module -Force
     }
 }
 
