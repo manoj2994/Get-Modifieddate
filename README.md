@@ -1,3 +1,3 @@
 # Get-Modifieddate
 
-![Build status](https://ci.appveyor.com/api/github/webhook?id=q2xtrm76riecj9x0)
+[![Build status](https://ci.appveyor.com/api/projects/status/4319d1qug69yplsc?svg=true)](https://ci.appveyor.com/project/manoj2994/get-modifieddate)
