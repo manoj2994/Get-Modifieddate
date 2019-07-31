@@ -36,13 +36,13 @@ Copyright = '(c) 2019 Manoj Krishnasamy. All rights reserved.'
 # PowerShellVersion = ''
 
 # Name of the Windows PowerShell host required by this module
-# PowerShellHostName = ''
+# PowerShellHostName = '5+'
 
 # Minimum version of the Windows PowerShell host required by this module
 # PowerShellHostVersion = ''
 
 # Minimum version of Microsoft .NET Framework required by this module. This prerequisite is valid for the PowerShell Desktop edition only.
-# DotNetFrameworkVersion = ''
+# DotNetFrameworkVersion = '4'
 
 # Minimum version of the common language runtime (CLR) required by this module. This prerequisite is valid for the PowerShell Desktop edition only.
 # CLRVersion = ''
