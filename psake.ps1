@@ -53,11 +53,22 @@ Task Tests -Depends Init {
 }
 
 
-Task Build -Depends Test {
+Task Build -Depends Tests {
     $lines
 
     # Load the module, read the exported functions, update the psd1 FunctionsToExport
     Set-ModuleFunctions -Name $env:BHPSModuleManifest 
+    
+    $version = [version] (Step-Version (Get-Metadata -Path $env:BHPSModuleManifest))
+    $galleryVersion = Get-NextPSGalleryVersion -Name $env:BHProjectName
+    
+    if ($version -lt $galleryVersion)
+    {
+        $version = $galleryVersion
+    }
+    $version = [version]::New($version.Major, $version.Minor, $version.Build, $env:BHBuildNumber)
+    Write-Host "Using version: $version"
+
     Update-Metadata -Path $env:BHPSModuleManifest -PropertyName ModuleVersion -Value $version
 }
 
