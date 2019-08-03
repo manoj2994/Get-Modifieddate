@@ -30,13 +30,13 @@ CompanyName = 'Manoj Krishnasamy'
 Copyright = '(c) 2019 Manoj Krishnasamy. All rights reserved.'
 
 # Description of the functionality provided by this module
-# Description = 'This module will help us to get the affected or changed file under folder having many subfolders '
+ Description = 'This module will help us to get the last modified folder,generally if file changed under folder it wont have impact on the folder lastwritten time.This will overcome '
 
 # Minimum version of the Windows PowerShell engine required by this module
-# PowerShellVersion = ''
+# PowerShellVersion = '3+'
 
 # Name of the Windows PowerShell host required by this module
-# PowerShellHostName = '5+'
+# PowerShellHostName = ''
 
 # Minimum version of the Windows PowerShell host required by this module
 # PowerShellHostVersion = ''
@@ -69,7 +69,7 @@ Copyright = '(c) 2019 Manoj Krishnasamy. All rights reserved.'
 # NestedModules = @()
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
-FunctionsToExport = @()
+FunctionsToExport = @("Get-Modifieddate")
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
 CmdletsToExport = @()
