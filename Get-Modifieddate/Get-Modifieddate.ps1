@@ -3,7 +3,8 @@ function Get-Modifieddate {
     Param( 
         [Parameter(Mandatory = $true)]
         [ValidateScript( { Test-Path $_ -PathType 'container' })]  
-        [string] $Path  
+        [string] $Path,
+        [switch]$ShowWindow
     )
     
     Begin {
@@ -54,6 +55,9 @@ function Get-Modifieddate {
     }
     
     end {
+        if($PSBoundParameters.ContainsKey('ShowWindow')){
+            return $result | Out-GridView
+        }
         return $result | FT -AutoSize
     }
 }

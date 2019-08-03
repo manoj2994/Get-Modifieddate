@@ -1,12 +1,10 @@
 ﻿$Moduleroot = Resolve-Path "$PSScriptRoot\.."
 $test = "$Moduleroot\*.psm1"
-#import-module $test
+import-module $test
 
-Describe "Get-Modifieddate" {
-    It "does something useful" {
-        $true | Should -Be $true
+Describe "Get-Modifieddate Unit Testing" {
+    It "Checking the Path Parameter is mandatory" {
+        (Get-command -Name Get-Modifieddate ).Parameters['Path'].Attributes.mandatory | Should -BeTrue
     }
-    It "Testing path"{
-        Test-Path $test | Should -BeFalse
-    }
+    
 }
