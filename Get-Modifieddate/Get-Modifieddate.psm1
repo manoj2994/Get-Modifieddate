@@ -1,5 +1,3 @@
-Write-Verbose "Loading Module Files from the Rot Path"
+$path = Gci "$PSScriptroot\Get-Modifieddate.ps1"
 
-. $PSScriptRoot\Get-modifieddate.ps1
-
-Write-Verbose "Loading Completed"
+. $path.FullName
