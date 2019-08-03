@@ -1,5 +1,5 @@
 ﻿$Moduleroot = Resolve-Path "$PSScriptRoot\.."
-$test = "$Moduleroot\*.psm1"
+$test = gci -Path "$Moduleroot\Get-Modifieddate\*.psm1" -File
 import-module $test
 
 Describe "Get-Modifieddate Unit Testing" {
