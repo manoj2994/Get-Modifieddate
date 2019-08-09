@@ -25,12 +25,12 @@ function Get-Modifieddate {
                     { $length += $_.length })
             
             #Sortin out the last modified date
-            $modified =$i.GetFileSystemInfos([System.IO.SearchOption]::AllDirectories)|
+            $modified =$i.GetFileSystemInfos("./",[System.IO.SearchOption]::AllDirectories)|
                     sort -Property LastWriteTime | select -Last 1
     
                 if ((Get-Date).AddMinutes(-60) -lt $modified.LastWriteTime) {
     
-                    $span = New-TimeSpan -Start (Get-Date).AddMinutes(-60) -End $modified.LastWriteTime
+                    $span = New-TimeSpan -Start $modified.LastWriteTime -End (Get-Date)
                     $time = "{0:mm} Minutes Ago" -f $span
                 }
                 else {
